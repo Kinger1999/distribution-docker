@@ -9,7 +9,7 @@ RUN /root/setup-os.sh
 
 # Copy package from build directory
 ARG implyversion
-COPY imply-$implyversion /opt/imply-${implyversion}
+COPY ["imply-$implyversion", "/opt/imply-${implyversion}"]
 RUN mkdir -p /mnt/imply/var && ln -snf /mnt/imply/var /opt/imply-${implyversion}/var
 RUN ln -snf /opt/imply-${implyversion} /opt/imply
 
