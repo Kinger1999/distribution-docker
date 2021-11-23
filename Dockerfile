@@ -15,6 +15,6 @@ RUN ln -snf /opt/imply-${implyversion} /opt/imply
 
 EXPOSE 1527 2181 8081 8082 8083 8090 8091 8100 8101 8102 8103 8104 8105 8106 8107 8108 8109 8110 8200 9095
 
-WORKDIR /opt/imply-$implyversion
+WORKDIR /opt/imply
 
 CMD ["bin/supervise", "-c", "conf/supervise/quickstart.conf"]
