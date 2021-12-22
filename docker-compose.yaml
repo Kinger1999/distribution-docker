@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  manager:
+    image: iamkinger/imply-quickstart:latest
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        "implyversion": "2021.12"
